@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: 'https://book-a-doctor-c07k.onrender.com/api',
 });
 
 api.interceptors.request.use((config) => {
