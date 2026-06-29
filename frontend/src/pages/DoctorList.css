@@ -1,0 +1,84 @@
+.search-bar {
+  margin-top: 1.5rem;
+  max-width: 500px;
+}
+
+.search-bar .form-control {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  font-size: 1rem;
+  padding: 0.875rem 1.25rem;
+}
+
+.search-bar .form-control::placeholder { color: rgba(255,255,255,0.7); }
+.search-bar .form-control:focus {
+  background: white;
+  color: #1e293b;
+}
+
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.doctor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.doctor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.doctor-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.doctor-avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary) 0%, #3b82f6 100%);
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.doctor-info { width: 100%; }
+.doctor-info h3 { font-size: 1.1rem; margin-bottom: 0.25rem; }
+.doctor-spec { color: var(--primary); font-weight: 600; font-size: 0.875rem; margin-bottom: 0.5rem; }
+.doctor-exp, .doctor-hospital, .doctor-location {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.doctor-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.doctor-fee { font-weight: 700; color: var(--secondary); font-size: 1.1rem; }
+.doctor-rating { font-size: 0.875rem; color: #92400e; }
+
+@media (max-width: 768px) {
+  .doctors-grid { grid-template-columns: 1fr; }
+}
